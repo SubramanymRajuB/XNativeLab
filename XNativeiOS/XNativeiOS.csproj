@@ -158,10 +158,6 @@
         <Compile Include="Storyboards\ImageDemoView.designer.cs">
           <DependentUpon>ImageDemoView.cs</DependentUpon>
         </Compile>
-        <Compile Include="Storyboards\Controller.cs" />
-        <Compile Include="Storyboards\Controller.designer.cs">
-          <DependentUpon>Controller.cs</DependentUpon>
-        </Compile>
         <Compile Include="Storyboards\VectorImageDemoView.cs" />
         <Compile Include="Storyboards\VectorImageDemoView.designer.cs">
           <DependentUpon>VectorImageDemoView.cs</DependentUpon>
