@@ -116,14 +116,23 @@
         <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
             <Visible>false</Visible>
         </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\Monkey.imageset\Contents.json" />
+        <ImageAsset Include="Assets.xcassets\PurpleMonkey.imageset\Contents.json" />
+        <ImageAsset Include="Assets.xcassets\Monkey.imageset\Monkey_pdf.pdf" />
+        <ImageAsset Include="Assets.xcassets\PurpleMonkey.imageset\Monkey.png" />
+        <ImageAsset Include="Assets.xcassets\PurpleMonkey.imageset\Monkey%402x.png" />
+        <ImageAsset Include="Assets.xcassets\PurpleMonkey.imageset\Monkey%403x.png" />
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Resources\" />
         <Folder Include="Storyboards\" />
+        <Folder Include="Assets.xcassets\Monkey.imageset\" />
+        <Folder Include="Assets.xcassets\PurpleMonkey.imageset\" />
     </ItemGroup>
     <ItemGroup>
         <InterfaceDefinition Include="LaunchScreen.storyboard" />
         <InterfaceDefinition Include="Storyboards\FirstDemoView.storyboard" />
+        <InterfaceDefinition Include="Storyboards\ImageDemo.storyboard" />
     </ItemGroup>
     <ItemGroup>
         <None Include="Info.plist" />
@@ -131,10 +140,31 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Main.cs" />
-        <Compile Include="AppDelegate.cs" />
+        <Compile Include="MVVMCrossAppDelegate.cs" />
         <Compile Include="Storyboards\FirstDemoView.cs" />
         <Compile Include="Storyboards\FirstDemoView.designer.cs">
           <DependentUpon>FirstDemoView.cs</DependentUpon>
+        </Compile>
+        <Compile Include="AppDelegate.cs" />
+        <Compile Include="Storyboards\FirstViewController.cs" />
+        <Compile Include="Storyboards\FirstViewController.designer.cs">
+          <DependentUpon>FirstViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Storyboards\SecondViewController.cs" />
+        <Compile Include="Storyboards\SecondViewController.designer.cs">
+          <DependentUpon>SecondViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Storyboards\ImageDemoView.cs" />
+        <Compile Include="Storyboards\ImageDemoView.designer.cs">
+          <DependentUpon>ImageDemoView.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Storyboards\Controller.cs" />
+        <Compile Include="Storyboards\Controller.designer.cs">
+          <DependentUpon>Controller.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Storyboards\VectorImageDemoView.cs" />
+        <Compile Include="Storyboards\VectorImageDemoView.designer.cs">
+          <DependentUpon>VectorImageDemoView.cs</DependentUpon>
         </Compile>
     </ItemGroup>
     <ItemGroup>
@@ -142,6 +172,14 @@
         <Project>{E6DF04F0-C362-4957-BC88-9365DB0E32D8}</Project>
         <Name>XCore</Name>
       </ProjectReference>
+    </ItemGroup>
+    <ItemGroup>
+      <BundleResource Include="Resources\first.png" />
+      <BundleResource Include="Resources\first%402x.png" />
+      <BundleResource Include="Resources\second.png" />
+      <BundleResource Include="Resources\second%402x.png" />
+      <BundleResource Include="Images\Green\GreenMonkey.png" />
+      <BundleResource Include="Images\Red\RedMonkey.png" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
