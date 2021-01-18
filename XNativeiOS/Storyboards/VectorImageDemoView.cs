@@ -11,6 +11,8 @@ namespace XNativeiOS.Storyboards
 	{
 		public VectorImageDemoView (IntPtr handle) : base (handle)
 		{
+			//this.Title = NSBundle.MainBundle.LocalizedString("First", "First");
+			//this.TabBarItem.Image = UIImage.FromBundle("second");
 		}
 	}
 }

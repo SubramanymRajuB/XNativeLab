@@ -5,6 +5,7 @@ using System;
 using Foundation;
 using UIKit;
 
+//This is Other Image Path reference demo
 namespace XNativeiOS.Storyboards
 {
 	public partial class FirstViewController : UIViewController
@@ -20,7 +21,10 @@ namespace XNativeiOS.Storyboards
 
 			// Set image in code
 			 MonkeyImage.Image = UIImage.FromFile ("Images/Red/RedMonkey.png");
-			// MonkeyImage.Image = UIImage.FromBundle ("PurpleMonkey");
+
+			/* It should templated Image*/
+			//MonkeyImage.Image = UIImage.FromBundle ("PurpleMonkey");
+			//MonkeyImage.TintColor = UIColor.Yellow;
 		}
 	}
 }

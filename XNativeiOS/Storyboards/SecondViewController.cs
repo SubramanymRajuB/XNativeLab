@@ -5,6 +5,7 @@ using System;
 using Foundation;
 using UIKit;
 
+//This is Asset catalog Image reference demo
 namespace XNativeiOS.Storyboards
 {
 	public partial class SecondViewController : UIViewController

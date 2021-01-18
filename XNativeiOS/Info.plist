@@ -42,5 +42,16 @@
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>UIMainStoryboardFile</key>
 	<string>ImageDemo</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>CFBundleTypeName</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>pdf</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>
