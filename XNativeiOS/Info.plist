@@ -41,7 +41,7 @@
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>UIMainStoryboardFile</key>
-	<string>ImageDemo</string>
+	<string>StackViewDemoView</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>

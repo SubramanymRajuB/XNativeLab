@@ -133,6 +133,7 @@
         <InterfaceDefinition Include="LaunchScreen.storyboard" />
         <InterfaceDefinition Include="Storyboards\FirstDemoView.storyboard" />
         <InterfaceDefinition Include="Storyboards\ImageDemo.storyboard" />
+        <InterfaceDefinition Include="Storyboards\StackViewDemoView.storyboard" />
     </ItemGroup>
     <ItemGroup>
         <None Include="Info.plist" />
@@ -161,6 +162,10 @@
         <Compile Include="Storyboards\VectorImageDemoView.cs" />
         <Compile Include="Storyboards\VectorImageDemoView.designer.cs">
           <DependentUpon>VectorImageDemoView.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Storyboards\StackViewDemoView.cs" />
+        <Compile Include="Storyboards\StackViewDemoView.designer.cs">
+          <DependentUpon>StackViewDemoView.cs</DependentUpon>
         </Compile>
     </ItemGroup>
     <ItemGroup>
