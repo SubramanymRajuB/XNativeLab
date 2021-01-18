@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZBI-1e-YfO">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First Demo View-->
+        <scene sceneID="7XA-i1-u1f">
+            <objects>
+                <viewController storyboardIdentifier="FirstDemoView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZBI-1e-YfO" customClass="FirstDemoView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iX8-lp-JKU"/>
+                        <viewControllerLayoutGuide type="bottom" id="AO7-1B-xIk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="asW-qr-tfX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8EJ-X4-8iH" userLabel="Phone">
+                                <rect key="frame" x="20" y="343" width="374" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Phone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="npl-wD-Xro" userLabel="Password">
+                                        <rect key="frame" x="10" y="0.0" width="351" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="TxtPhone"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="npl-wD-Xro" secondAttribute="bottom" id="IdW-U4-zLl"/>
+                                    <constraint firstItem="npl-wD-Xro" firstAttribute="leading" secondItem="8EJ-X4-8iH" secondAttribute="leading" constant="10" id="Uso-eR-eJA"/>
+                                    <constraint firstAttribute="height" constant="50" id="gy7-84-K7u"/>
+                                    <constraint firstAttribute="trailing" secondItem="npl-wD-Xro" secondAttribute="trailing" constant="13" id="hZI-rP-wlI"/>
+                                    <constraint firstItem="npl-wD-Xro" firstAttribute="top" secondItem="8EJ-X4-8iH" secondAttribute="top" id="lV6-kU-5DW"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="BtnTranslate" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgB-oS-qRL">
+                                <rect key="frame" x="20" y="622" width="374" height="49"/>
+                                <color key="backgroundColor" red="0.72156862749999995" green="0.058823529409999999" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="BtnTranslate"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="RB2-9X-26h"/>
+                                    <constraint firstAttribute="width" constant="400" id="bvL-qk-qED"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                <state key="normal" title="Translate">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bvL-qk-qED"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="bvL-qk-qED"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmX-Yy-vs4">
+                                <rect key="frame" x="20" y="679" width="374" height="49"/>
+                                <color key="backgroundColor" red="0.72214514019999998" green="0.059743322430000002" blue="0.092643566430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="cHp-0a-QS8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                <state key="normal" title="Call">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cHp-0a-QS8"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="cHp-0a-QS8"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8EJ-X4-8iH" firstAttribute="centerY" secondItem="asW-qr-tfX" secondAttribute="centerY" id="5ii-eu-AcN"/>
+                            <constraint firstItem="rmX-Yy-vs4" firstAttribute="centerX" secondItem="asW-qr-tfX" secondAttribute="centerX" id="8Q7-zj-aQg"/>
+                            <constraint firstItem="8EJ-X4-8iH" firstAttribute="leading" secondItem="rmX-Yy-vs4" secondAttribute="leading" id="ALF-Fz-Jxr"/>
+                            <constraint firstItem="AO7-1B-xIk" firstAttribute="top" secondItem="rmX-Yy-vs4" secondAttribute="bottom" constant="8" id="C1J-jJ-H9X"/>
+                            <constraint firstAttribute="trailing" secondItem="8EJ-X4-8iH" secondAttribute="trailing" constant="20" symbolic="YES" id="CKs-p9-M7s"/>
+                            <constraint firstItem="qgB-oS-qRL" firstAttribute="height" secondItem="rmX-Yy-vs4" secondAttribute="height" id="L8T-Tb-c84"/>
+                            <constraint firstItem="8EJ-X4-8iH" firstAttribute="leading" secondItem="qgB-oS-qRL" secondAttribute="leading" id="QQn-MK-dey"/>
+                            <constraint firstItem="rmX-Yy-vs4" firstAttribute="top" secondItem="qgB-oS-qRL" secondAttribute="bottom" constant="8" id="gZa-Dn-TZA"/>
+                            <constraint firstItem="8EJ-X4-8iH" firstAttribute="trailing" secondItem="qgB-oS-qRL" secondAttribute="trailing" id="j3C-Fy-HnK"/>
+                            <constraint firstItem="8EJ-X4-8iH" firstAttribute="leading" secondItem="asW-qr-tfX" secondAttribute="leading" constant="20" symbolic="YES" id="ksN-z9-5HU"/>
+                            <constraint firstItem="8EJ-X4-8iH" firstAttribute="trailing" secondItem="rmX-Yy-vs4" secondAttribute="trailing" id="puD-rc-Lt2"/>
+                            <constraint firstItem="qgB-oS-qRL" firstAttribute="centerX" secondItem="asW-qr-tfX" secondAttribute="centerX" id="uar-JX-nUM"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="uar-JX-nUM"/>
+                                <exclude reference="8Q7-zj-aQg"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="CKs-p9-M7s"/>
+                                <exclude reference="ksN-z9-5HU"/>
+                                <include reference="uar-JX-nUM"/>
+                                <include reference="8Q7-zj-aQg"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="BtnCall" destination="rmX-Yy-vs4" id="gZO-zv-0v7"/>
+                        <outlet property="BtnTranslate" destination="qgB-oS-qRL" id="FT4-7r-72y"/>
+                        <outlet property="TxtPhone" destination="npl-wD-Xro" id="4CZ-bp-bqg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HKi-1G-H8Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3149.2750000000001" y="-1407.5889999999999"/>
+        </scene>
+    </scenes>
+</document>
