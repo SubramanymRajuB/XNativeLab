@@ -120,11 +120,10 @@
     <ItemGroup>
         <Folder Include="Resources\" />
         <Folder Include="Storyboards\" />
-        <Folder Include="Views\" />
     </ItemGroup>
     <ItemGroup>
         <InterfaceDefinition Include="LaunchScreen.storyboard" />
-        <InterfaceDefinition Include="FirstDemoView.storyboard" />
+        <InterfaceDefinition Include="Storyboards\FirstDemoView.storyboard" />
     </ItemGroup>
     <ItemGroup>
         <None Include="Info.plist" />
@@ -133,8 +132,8 @@
     <ItemGroup>
         <Compile Include="Main.cs" />
         <Compile Include="AppDelegate.cs" />
-        <Compile Include="FirstDemoView.cs" />
-        <Compile Include="FirstDemoView.designer.cs">
+        <Compile Include="Storyboards\FirstDemoView.cs" />
+        <Compile Include="Storyboards\FirstDemoView.designer.cs">
           <DependentUpon>FirstDemoView.cs</DependentUpon>
         </Compile>
     </ItemGroup>
