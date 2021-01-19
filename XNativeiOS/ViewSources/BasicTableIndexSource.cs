@@ -60,6 +60,22 @@ namespace XNativeiOS.ViewSources
 		}
 
 		/// <summary>
+		/// The string to show in the section header
+		/// </summary>
+		//public override string TitleForHeader(UITableView tableView, nint section)
+		//{
+		//	return keys[section];
+		//}
+
+		/// <summary>
+		/// The string to show in the section footer
+		/// </summary>
+		//public override string TitleForFooter(UITableView tableView, nint section)
+		//{
+		//	return indexedTableItems[keys[section]].Count + " items";
+		//}
+
+		/// <summary>
 		/// Called when a row is touched
 		/// </summary>
 		public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
@@ -75,11 +91,34 @@ namespace XNativeiOS.ViewSources
 		/// </summary>
 		public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
 		{
+
 			// request a recycled cell to save memory
 			UITableViewCell cell = tableView.DequeueReusableCell(cellIdentifier);
+
+
+			// UNCOMMENT one of these to use that style
+			var cellStyle = UITableViewCellStyle.Default;
+			//			var cellStyle = UITableViewCellStyle.Subtitle;
+			//			var cellStyle = UITableViewCellStyle.Value1;
+			//			var cellStyle = UITableViewCellStyle.Value2;
+
 			// if there are no cells to reuse, create a new one
 			if (cell == null)
-				cell = new UITableViewCell(UITableViewCellStyle.Default, cellIdentifier);
+				cell = new UITableViewCell(cellStyle, cellIdentifier);
+
+			// Value2 style doesn't support an image
+			if (cellStyle != UITableViewCellStyle.Value2)
+			{
+				cell.ImageView.Image = UIImage.FromBundle("first");
+			}
+
+
+			// UNCOMMENT one of these to see that accessory
+			//cell.Accessory = UITableViewCellAccessory.Checkmark;
+			// cell.Accessory = UITableViewCellAccessory.DetailButton;
+			cell.Accessory = UITableViewCellAccessory.DisclosureIndicator;
+			//cell.Accessory = UITableViewCellAccessory.DetailDisclosureButton;  // implement AccessoryButtonTapped
+			//cell.Accessory = UITableViewCellAccessory.None; // to clear the accessory
 
 			cell.TextLabel.Text = indexedTableItems[keys[indexPath.Section]][indexPath.Row];
 
