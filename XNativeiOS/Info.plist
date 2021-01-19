@@ -40,8 +40,6 @@
 	</array>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
-	<key>UIMainStoryboardFile</key>
-	<string>StackViewDemoView</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
