@@ -2,6 +2,7 @@
 using Foundation;
 using UIKit;
 using XNativeiOS.Models;
+using XNativeiOS.Storyboards;
 
 namespace XNativeiOS.ViewSources
 {
@@ -24,9 +25,9 @@ namespace XNativeiOS.ViewSources
 		public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
 		{
 			// in a Storyboard, Dequeue will ALWAYS return a cell, 
-			var cell = tableView.DequeueReusableCell(cellIdentifier);
+			var cell = tableView.DequeueReusableCell(cellIdentifier) as taskcell;
 			// now set the properties as normal
-			cell.TextLabel.Text = tableItems[indexPath.Row].Name;
+			cell.TxtTitle.Text = tableItems[indexPath.Row].Name;
 			if (tableItems[indexPath.Row].Done)
 				cell.Accessory = UITableViewCellAccessory.Checkmark;
 			else

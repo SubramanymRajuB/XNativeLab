@@ -189,6 +189,10 @@
         </Compile>
         <Compile Include="Models\Chores.cs" />
         <Compile Include="ViewSources\RootTableSource.cs" />
+        <Compile Include="Storyboards\taskcell.cs" />
+        <Compile Include="Storyboards\taskcell.designer.cs">
+          <DependentUpon>taskcell.cs</DependentUpon>
+        </Compile>
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\XCore\XCore.csproj">
