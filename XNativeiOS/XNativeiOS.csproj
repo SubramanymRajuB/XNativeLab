@@ -130,6 +130,7 @@
         <Folder Include="Assets.xcassets\PurpleMonkey.imageset\" />
         <Folder Include="Delegates\" />
         <Folder Include="ViewSources\" />
+        <Folder Include="Files\" />
     </ItemGroup>
     <ItemGroup>
         <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -171,6 +172,7 @@
         <Compile Include="Delegates\AppDelegate.cs" />
         <Compile Include="Delegates\MVVMCrossAppDelegate.cs" />
         <Compile Include="ViewSources\BasicTableSource.cs" />
+        <Compile Include="ViewSources\BasicTableIndexSource.cs" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\XCore\XCore.csproj">
@@ -185,6 +187,9 @@
       <BundleResource Include="Resources\second%402x.png" />
       <BundleResource Include="Images\Green\GreenMonkey.png" />
       <BundleResource Include="Images\Red\RedMonkey.png" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="Files\VegeData.txt" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
