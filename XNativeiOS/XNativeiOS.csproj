@@ -138,6 +138,7 @@
         <InterfaceDefinition Include="Storyboards\FirstDemoView.storyboard" />
         <InterfaceDefinition Include="Storyboards\ImageDemo.storyboard" />
         <InterfaceDefinition Include="Storyboards\StackViewDemoView.storyboard" />
+        <InterfaceDefinition Include="Storyboards\TabeViewListNav.storyboard" />
     </ItemGroup>
     <ItemGroup>
         <None Include="Info.plist" />
@@ -178,6 +179,16 @@
         <Compile Include="Storyboards\CustomTableView.cs" />
         <Compile Include="Models\TableItem.cs" />
         <Compile Include="ViewSources\CustomTableSource.cs" />
+        <Compile Include="Storyboards\TableListView.cs" />
+        <Compile Include="Storyboards\TableListView.designer.cs">
+          <DependentUpon>TableListView.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Storyboards\TaskDetailViewController.cs" />
+        <Compile Include="Storyboards\TaskDetailViewController.designer.cs">
+          <DependentUpon>TaskDetailViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Models\Chores.cs" />
+        <Compile Include="ViewSources\RootTableSource.cs" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\XCore\XCore.csproj">
