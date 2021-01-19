@@ -19,14 +19,17 @@ namespace XNativeiOS.Delegates
 		}
 
 		protected UIWindow window;
-		protected BasicTableView iPhoneHome;
+		//protected BasicTableView iPhoneHome;
+		protected CustomTableView iPhoneHome;
 
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
 			window = new UIWindow(UIScreen.MainScreen.Bounds);
 			window.MakeKeyAndVisible();
 
-			iPhoneHome = new BasicTableView();
+			//iPhoneHome = new BasicTableView();
+			iPhoneHome = new CustomTableView();
+
 			iPhoneHome.View.Frame = new CoreGraphics.CGRect(0
 						, UIApplication.SharedApplication.StatusBarFrame.Height
 						, UIScreen.MainScreen.ApplicationFrame.Width

@@ -131,6 +131,7 @@
         <Folder Include="Delegates\" />
         <Folder Include="ViewSources\" />
         <Folder Include="Files\" />
+        <Folder Include="Models\" />
     </ItemGroup>
     <ItemGroup>
         <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -173,6 +174,10 @@
         <Compile Include="Delegates\MVVMCrossAppDelegate.cs" />
         <Compile Include="ViewSources\BasicTableSource.cs" />
         <Compile Include="ViewSources\BasicTableIndexSource.cs" />
+        <Compile Include="Storyboards\VegeCell.cs" />
+        <Compile Include="Storyboards\CustomTableView.cs" />
+        <Compile Include="Models\TableItem.cs" />
+        <Compile Include="ViewSources\CustomTableSource.cs" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\XCore\XCore.csproj">
