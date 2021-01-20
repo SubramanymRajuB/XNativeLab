@@ -9,10 +9,12 @@ namespace XNativeiOS
         {
             // if you want to use a different Application Delegate class from "AppDelegate"
             // you can specify it here.
-            //UIApplication.Main(args, null, "MVVMCrossAppDelegate");//MVVMCross
+            //UIApplication.Main(args, null, "AppDelegate");//Default
+
+            UIApplication.Main(args, null, "MVVMCrossAppDelegate");//MVVMCross
 
 
-            UIApplication.Main(args, null, "AppDelegate");//Default
+
         }
     }
 }

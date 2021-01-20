@@ -139,6 +139,7 @@
         <InterfaceDefinition Include="Storyboards\ImageDemo.storyboard" />
         <InterfaceDefinition Include="Storyboards\StackViewDemoView.storyboard" />
         <InterfaceDefinition Include="Storyboards\TabeViewListNav.storyboard" />
+        <InterfaceDefinition Include="Storyboards\MVVMCrossList.storyboard" />
     </ItemGroup>
     <ItemGroup>
         <None Include="Info.plist" />
@@ -193,6 +194,20 @@
         <Compile Include="Storyboards\taskcell.designer.cs">
           <DependentUpon>taskcell.cs</DependentUpon>
         </Compile>
+        <Compile Include="Storyboards\MVVMTaskListView.cs" />
+        <Compile Include="Storyboards\MVVMTaskListView.designer.cs">
+          <DependentUpon>MVVMTaskListView.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Storyboards\MVVMTaskCell.cs" />
+        <Compile Include="Storyboards\MVVMTaskCell.designer.cs">
+          <DependentUpon>MVVMTaskCell.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Storyboards\MVVMTaskDetailsView.cs" />
+        <Compile Include="Storyboards\MVVMTaskDetailsView.designer.cs">
+          <DependentUpon>MVVMTaskDetailsView.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewSources\TaskListViewSource.cs" />
+        <Compile Include="LinkerPleaseInclude.cs" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\XCore\XCore.csproj">

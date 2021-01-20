@@ -10,7 +10,8 @@ namespace XCore
         {
             //Mvx.RegisterType<ICalculationService, CalculationService>();
 
-            RegisterAppStart<FirstDemoViewModel>();
+            // RegisterAppStart<FirstDemoViewModel>();
+            RegisterAppStart<MVVMTaskListViewModel>();
         }
     }
 }
