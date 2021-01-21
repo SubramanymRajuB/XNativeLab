@@ -53,6 +53,48 @@ namespace XNativeAndroid.Views
             };
         }
 
+        protected override void OnStart()
+        {
+            base.OnStart();
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+        }
+
+        protected override void OnPause()
+        {
+            base.OnPause();
+        }
+
+        protected override void OnStop()
+        {
+            base.OnStop();
+        }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+        }
+
+        protected override void OnRestart()
+        {
+            base.OnRestart();
+        }
+
+        protected override void OnRestoreInstanceState(Bundle outState)
+        {
+            var getstring = outState.Get("MyString");
+            base.OnRestoreInstanceState(outState);
+        }
+
+        protected override void OnSaveInstanceState(Bundle saveState)
+        {
+            saveState.PutString("MyString","savedinstancevalue");
+            base.OnSaveInstanceState(saveState);
+        }
+
         public void PlacePhoneCall(string number)
         {
             try
