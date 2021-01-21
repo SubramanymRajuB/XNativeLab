@@ -10,10 +10,10 @@ using System.Collections.Generic;
 using XNativeAndroid.Models;
 using XNativeAndroid;
 
-namespace RecyclerViewer
+namespace XNativeAndroid.Views
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-    //[Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar")]
+    //[Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar")]
     public class MainActivity : Activity
     {
         // RecyclerView instance that displays the photo album:

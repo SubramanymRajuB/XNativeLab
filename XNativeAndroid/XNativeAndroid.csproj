@@ -67,6 +67,12 @@
     <Compile Include="Views\GridViewDemoActivity.cs" />
     <Compile Include="Models\PhotoAlbum.cs" />
     <Compile Include="Views\RecyclerViewDemoActivity.cs" />
+    <Compile Include="Views\ArrayAdapterDemo.cs" />
+    <Compile Include="Views\CustomArrayAdapterDemo.cs" />
+    <Compile Include="Adapters\BasicTableAdapter.cs" />
+    <Compile Include="Models\TableItem.cs" />
+    <Compile Include="Views\CustomListviewDemo.cs" />
+    <Compile Include="Adapters\CustomViewAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -166,6 +172,42 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\recyclerview_demo.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\listview_demo.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\CustomSelector.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\custom_view.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Bulbs.jpg">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\FlowerBuds.jpg">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Fruits.jpg">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Legumes.jpg">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Tubers.jpg">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Vegetables.jpg">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>

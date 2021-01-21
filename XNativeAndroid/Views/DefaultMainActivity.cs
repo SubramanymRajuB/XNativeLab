@@ -7,7 +7,7 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 
-namespace XNativeAndroid
+namespace XNativeAndroid.Views
 {
     //[Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar")]
