@@ -65,6 +65,8 @@
     <Compile Include="Views\DefaultMainActivity.cs" />
     <Compile Include="Adapters\ImageAdapter.cs" />
     <Compile Include="Views\GridViewDemoActivity.cs" />
+    <Compile Include="Models\PhotoAlbum.cs" />
+    <Compile Include="Views\RecyclerViewDemoActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -159,11 +161,20 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\card_view.axml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\recyclerview_demo.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
     <Folder Include="Views\" />
     <Folder Include="Adapters\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.3" />
