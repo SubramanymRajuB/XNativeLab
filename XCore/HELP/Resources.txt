@@ -1,0 +1,2 @@
+﻿Layouts: https://docs.microsoft.com/en-us/xamarin/android/user-interface/layouts/
+NavigationDrawer: https://docs.microsoft.com/en-us/samples/xamarin/monodroid-samples/android50-navigationdrawer/

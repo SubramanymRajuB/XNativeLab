@@ -10,7 +10,7 @@ using XNativeAndroid.Models;
 
 namespace XNativeAndroid.Views
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+    //[Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     //[Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar")]
     public class CustomArrayAdapterDemo : ListActivity
     {
