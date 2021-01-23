@@ -73,7 +73,7 @@ namespace XNativeAndroid.Views
 
             callButton.Click += (sender, e) =>
             {
-                ////With native
+                //With native
                 var permissionCheck = ContextCompat.CheckSelfPermission(this, Manifest.Permission.CallPhone);
 
                 if (permissionCheck != Android.Content.PM.Permission.Granted)
@@ -92,6 +92,13 @@ namespace XNativeAndroid.Views
 
                 //With xamarin essentails
                 //PhoneDialer.Open("3777789888");
+
+
+                //Intent Filter demo
+                //Intent si = new Intent(Intent.ActionSend);
+                //si.SetType("text/plain");
+                //si.PutExtra("email", "support@tutlane.com");
+                //StartActivity(Intent.CreateChooser(si, "Choose Mail App"));
             };
 
             Button urlButton = FindViewById<Button>(Resource.Id.UrlButton);

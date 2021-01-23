@@ -7,11 +7,10 @@ using Android.Widget;
 
 namespace XNativeAndroid.Views
 {
-    // [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-    //[Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar")]
+//    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar")]
 //    [IntentFilter(new[] { Intent.ActionSend }, Categories = new[] {
 //    Intent.CategoryDefault,
-//    Intent.CategoryBrowsable
+//    Intent.ActionSend
 //}, DataMimeType = "text/plain")]
     public class IntentsSecondActivity : AppCompatActivity
     {
@@ -31,9 +30,7 @@ namespace XNativeAndroid.Views
                 {
 
                     // Make sure to check whether returned data will be null.
-                    string titleOfPage = Intent.GetStringExtra(Intent.ExtraSubject);
-                    string urlOfPage = Intent.GetStringExtra(Intent.ExtraText);
-                    var imageUriOfPage = (Android.Net.Uri)Intent.GetParcelableExtra(Intent.ExtraStream);
+                    string email = Intent.GetStringExtra("email");
                 }
             }
 
