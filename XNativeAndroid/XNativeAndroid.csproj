@@ -74,6 +74,8 @@
     <Compile Include="Views\CustomListviewDemo.cs" />
     <Compile Include="Adapters\CustomViewAdapter.cs" />
     <Compile Include="Views\NavigationDrawerDemo.cs" />
+    <Compile Include="Views\IntentsDemo.cs" />
+    <Compile Include="Views\IntentsSecondActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -249,6 +251,10 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\drawerfragment.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\intent_demo.xml">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
