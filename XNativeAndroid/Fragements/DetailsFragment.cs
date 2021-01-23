@@ -70,5 +70,10 @@ namespace XNativeAndroid.Fragements
         {
             base.OnResume();
         }
+
+        public override void OnPause()
+        {
+            base.OnPause();
+        }
     }
 }

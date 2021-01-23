@@ -17,6 +17,11 @@ namespace XNativeAndroid.Views
             var fragmentTransaction = FragmentManager.BeginTransaction();
             fragmentTransaction.Add(Android.Resource.Id.Content, details);
             fragmentTransaction.Commit();
+
+    //        SupportFragmentManager // Get the support fragment manager instead of the FragmentManager
+    //.BeginTransaction() // Start a transaction
+    //.Add(Resource.Id.container, details, "coursesFragment") // Add the fragment
+    //.Commit(); // Commit the changes
         }
 
         protected override void OnStart()
