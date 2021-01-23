@@ -12,7 +12,7 @@
 	</queries>
 	<application>
 		<!-- Set Launcher -->
-		<activity android:label="@string/app_name" android:theme="@style/AppTheme.NoActionBar" android:name="crc64fe02d29caf09a34a.TabsDemo">
+		<activity android:label="@string/app_name" android:theme="@style/AppTheme.NoActionBar" android:name="crc64fe02d29caf09a34a.FragmentDemo">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.LAUNCHER" />

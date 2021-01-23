@@ -78,6 +78,11 @@
     <Compile Include="Views\IntentsSecondActivity.cs" />
     <Compile Include="Views\TabsDemo.cs" />
     <Compile Include="Fragements\Fragments_Tabs.cs" />
+    <Compile Include="Models\Shakespeare.cs" />
+    <Compile Include="Fragements\TitlesFragment.cs" />
+    <Compile Include="Views\FragmentDemoDetails.cs" />
+    <Compile Include="Views\FragmentDemo.cs" />
+    <Compile Include="Fragements\DetailsFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -280,6 +285,14 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\fragemnt_demo_main.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout-land\fragemnt_demo_main.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
@@ -287,6 +300,7 @@
     <Folder Include="Adapters\" />
     <Folder Include="Models\" />
     <Folder Include="Fragements\" />
+    <Folder Include="Resources\layout-land\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.3" />
