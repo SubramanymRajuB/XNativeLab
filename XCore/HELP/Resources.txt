@@ -1,3 +1,4 @@
 ﻿Layouts: https://docs.microsoft.com/en-us/xamarin/android/user-interface/layouts/
+TabbedLayout: https://www.c-sharpcorner.com/article/xamarin-android-create-viewpager-tablayout-floatingactionbutton-supportacti/
 NavigationDrawer: https://docs.microsoft.com/en-us/samples/xamarin/monodroid-samples/android50-navigationdrawer/
 Inetnts: https://guides.peruzal.com/xamarin-android/navigation/
