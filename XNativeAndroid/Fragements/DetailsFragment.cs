@@ -40,5 +40,35 @@ namespace XNativeAndroid.Fragements
 
             return scroller;
         }
+
+        public override void OnInflate(Activity activity, IAttributeSet attrs, Bundle savedInstanceState)
+        {
+            base.OnInflate(activity, attrs, savedInstanceState);
+        }
+
+        public override void OnAttach(Activity activity)
+        {
+            base.OnAttach(activity);
+        }
+
+        public override void OnCreate(Bundle savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
+        }
+
+        public override void OnActivityCreated(Bundle savedInstanceState)
+        {
+            base.OnActivityCreated(savedInstanceState);
+        }
+
+        public override void OnStart()
+        {
+            base.OnStart();
+        }
+
+        public override void OnResume()
+        {
+            base.OnResume();
+        }
     }
 }

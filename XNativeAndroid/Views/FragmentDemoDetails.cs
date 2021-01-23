@@ -18,5 +18,35 @@ namespace XNativeAndroid.Views
             fragmentTransaction.Add(Android.Resource.Id.Content, details);
             fragmentTransaction.Commit();
         }
+
+        protected override void OnStart()
+        {
+            base.OnStart();
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+        }
+
+        protected override void OnPause()
+        {
+            base.OnPause();
+        }
+
+        protected override void OnStop()
+        {
+            base.OnStop();
+        }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+        }
+
+        protected override void OnRestart()
+        {
+            base.OnRestart();
+        }
     }
 }
