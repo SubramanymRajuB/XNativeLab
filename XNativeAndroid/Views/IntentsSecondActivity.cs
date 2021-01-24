@@ -7,11 +7,11 @@ using Android.Widget;
 
 namespace XNativeAndroid.Views
 {
-//    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar")]
-//    [IntentFilter(new[] { Intent.ActionSend }, Categories = new[] {
-//    Intent.CategoryDefault,
-//    Intent.ActionSend
-//}, DataMimeType = "text/plain")]
+    [Activity(Label ="Second Activity", Theme = "@style/AppTheme")]
+    //    [IntentFilter(new[] { Intent.ActionSend }, Categories = new[] {
+    //    Intent.CategoryDefault,
+    //    Intent.ActionSend
+    //}, DataMimeType = "text/plain")]
     public class IntentsSecondActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)

@@ -9,12 +9,13 @@ using Android.Support.V7.Widget;
 using System.Collections.Generic;
 using XNativeAndroid.Models;
 using XNativeAndroid;
+using Android.Support.V7.App;
 
 namespace XNativeAndroid.Views
 {
     //[Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar")]
-    public class MainActivity : Activity
+    //[Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar")]
+    public class RecyclerViewDemoActivity : AppCompatActivity
     {
         // RecyclerView instance that displays the photo album:
         RecyclerView mRecyclerView;

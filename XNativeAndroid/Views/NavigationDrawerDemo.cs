@@ -12,8 +12,6 @@ using Android.Support.Design.Widget;
 
 namespace XNativeAndroid.Views
 {
-    //[Activity(Label = "@string/app_name", Theme = "@style/Theme.DesignDemo", MainLauncher = true)]
-    //[Activity(Label = "@string/app_name", Theme = "@style/Theme.DesignDemo")]
     public class NavigationDrawerDemo : AppCompatActivity
     {
 

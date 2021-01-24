@@ -13,8 +13,6 @@ using Xamarin.Essentials;
 
 namespace XNativeAndroid.Views
 {
-    //[Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-    //[Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar")]
     public class IntentsDemo : AppCompatActivity
     {
         TextView txtTitle;
