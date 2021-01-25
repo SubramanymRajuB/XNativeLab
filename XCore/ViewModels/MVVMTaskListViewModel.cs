@@ -54,6 +54,17 @@ namespace XCore.ViewModels
             }
         }
 
+        public MvxCommand<Task> ItemClickCommand
+        {
+            get
+            {
+                return new MvxCommand<Task>(selectedList =>
+                {
+                    _navigationService.Navigate<MVVMTaskDetailsViewModel, Task>(selectedList);
+                });
+            }
+        }
+
         private void AddTask()
         {
             _navigationService.Navigate<MVVMTaskDetailsViewModel, Task>(null);

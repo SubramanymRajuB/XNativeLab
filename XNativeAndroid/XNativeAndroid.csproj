@@ -87,6 +87,8 @@
     <Compile Include="Views\MVVMDemo.cs" />
     <Compile Include="MainApplication.cs" />
     <Compile Include="SplashScreen.cs" />
+    <Compile Include="Views\MVVMTaskListDemo.cs" />
+    <Compile Include="Views\MVVMTaskDetailsDemo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -306,6 +308,18 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\mvvm_first_demo.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\mvvm_taskList.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\mvvm_taskitem.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\mvvm_taskdetails.xml">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
