@@ -56,7 +56,7 @@ namespace XNativeiOS.Storyboards
             TBTaskList.Source = source;
 
                     bindingSet.Bind(source)
-                              .To(vm => vm.TaskList);
+                              .To(vm => vm.TaskList).TwoWay();
 
                     bindingSet.Bind(source)
                               .For(c => c.SelectedItem)

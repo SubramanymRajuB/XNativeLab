@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
+using MvvmCross.Plugin.Messenger;
 using MvvmCross.ViewModels;
 using XCore.Models;
 
@@ -10,14 +13,45 @@ namespace XCore.ViewModels
     public class MVVMTaskListViewModel: MvxViewModel
     {
         private readonly IMvxNavigationService _navigationService;
+        private readonly MvxSubscriptionToken _token;
+
         public IMvxCommand AddCommand => new MvxCommand(AddTask);
-        public MVVMTaskListViewModel(IMvxNavigationService navigationService)
+
+        public MVVMTaskListViewModel(IMvxNavigationService navigationService, IMvxMessenger messenger)
         {
             _navigationService = navigationService;
-            TaskList = new List<Task> {
-                new Task {Name="Groceries", Notes="Buy bread, cheese, apples", Done=false},
-                new Task {Name="Devices", Notes="Buy Nexus, Galaxy, Droid", Done=false}
+            TaskList = new ObservableCollection<Task> {
+                new Task {Id=Guid.NewGuid(), Name="Groceries", Notes="Buy bread, cheese, apples", Done=false},
+                new Task {Id=Guid.NewGuid(), Name="Devices", Notes="Buy Nexus, Galaxy, Droid", Done=false}
             };
+
+            _token = messenger.Subscribe<TaskMessage>(UpdateItem);
+        }
+
+        void UpdateItem(TaskMessage message)
+        {
+            var task = message.Task;
+            if (task != null)
+            {
+                if (task.Status == "delete")
+                {
+                    TaskList.Remove(task);
+                }
+                else if (task.Status == "insert")
+                {
+                    TaskList.Add(task);
+                }
+                else if (task.Status == "update")
+                {
+                    var item = TaskList.FirstOrDefault(x => x.Id == task.Id);
+                    if (item != null)
+                    {
+                        item.Name = task.Name;
+                        item.Notes = task.Notes;
+                        item.Done = task.Done;
+                    }
+                }
+            }
         }
 
         public string pageTitle;
@@ -31,15 +65,11 @@ namespace XCore.ViewModels
             }
         }
 
-        List<Task> _tasks;
-        public List<Task> TaskList
+        ObservableCollection<Task> _tasks;
+        public ObservableCollection<Task> TaskList
         {
             get => _tasks;
-            set
-            {
-                _tasks = value;
-                RaisePropertyChanged();
-            }
+            set => SetProperty(ref _tasks, value);
         }
 
         Task _selectedTask;

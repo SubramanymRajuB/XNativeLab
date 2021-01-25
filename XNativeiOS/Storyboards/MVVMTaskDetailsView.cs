@@ -3,6 +3,7 @@ using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Platforms.Ios.Views;
 using UIKit;
+using XCore.ValueConverters;
 using XCore.ViewModels;
 
 namespace XNativeiOS.Storyboards
@@ -41,6 +42,8 @@ namespace XNativeiOS.Storyboards
 
             bindingSet.Bind(BtnDelete)
                       .To(vm => vm.DeleteCommand);
+
+            bindingSet.Bind(BtnDelete).For(tf => tf.Hidden).To(vm => vm.IsDelete).WithConversion(new OppositeBoolConverter());
 
             bindingSet.Apply();
         }

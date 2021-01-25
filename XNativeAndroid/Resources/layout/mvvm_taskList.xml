@@ -5,7 +5,13 @@
     android:layout_height="match_parent"
     android:background="@android:color/white"
     xmlns:local="http://schemas.android.com/apk/res-auto">
-    <Mvx.MvxListView
+    
+    <Button
+        android:text="Add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        local:MvxBind="Click AddCommand" />
+        <Mvx.MvxListView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@android:color/white"
