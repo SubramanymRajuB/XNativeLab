@@ -1,57 +1,55 @@
 using System;
 using Foundation;
-using MvvmCross.Binding.BindingContext;
-using MvvmCross.Platforms.Ios.Views;
 using UIKit;
-using XCore.ViewModels;
+using XCore.Models;
 
 namespace XNativeiOS.Storyboards
 {
-    [MvxFromStoryboard("FirstDemoView")]
-    public partial class FirstDemoView : MvxViewController<FirstDemoViewModel>
+    public partial class FirstDemoView : UIViewController
     {
         public FirstDemoView(IntPtr handle) : base(handle)
         {
         }
 
-        public override void ViewDidLoad()
-        {
-            base.ViewDidLoad();
-            SetLocalBindings();
-        }
+		public override void ViewDidLoad()
+		{
+			base.ViewDidLoad();
 
-        void SetLocalBindings()
-        {
-            var bindingSet = this.CreateBindingSet<FirstDemoView, FirstDemoViewModel>();
+			string translatedNumber = "";
 
-            bindingSet.Bind(TxtPhone)
-                      .For(c => c.Text)
-                      .To(vm => vm.Phone);
+			BtnTranslate.TouchUpInside += (object sender, EventArgs e) => {
+				// Convert the phone number with text to a number 
+				// using PhoneTranslator.cs
+				translatedNumber = PhoneTranslator.ToNumber(
+					TxtPhone.Text);
 
-            bindingSet.Bind(BtnTranslate)
-                      .To(vm => vm.TranslateCommand);
+				// Dismiss the keyboard if text field was tapped
+				TxtPhone.ResignFirstResponder();
 
-            BtnCall.TouchUpInside += Call_Click;
+				if (translatedNumber == "")
+				{
+					BtnCall.SetTitle("Call ", UIControlState.Normal);
+					BtnCall.Enabled = false;
+				}
+				else
+				{
+					BtnCall.SetTitle("Call " + translatedNumber,
+						UIControlState.Normal);
+					BtnCall.Enabled = true;
+				}
+			};
 
-            bindingSet.Bind(BtnCall).For(tf => tf.Enabled).To(vm => vm.IsCall);
-
-            bindingSet.Bind(BtnCall).For("Title").To(vm => vm.CallTitle);
-
-
-            bindingSet.Apply();
-        }
-
-        void Call_Click(object sender, EventArgs e)
-        {
-            var url = new NSUrl("tel:" + this.ViewModel.TranslateNo);
-            // Use URL handler with tel: prefix to invoke Apple's Phone app, 
-            // otherwise show an alert dialog                
-            if (!UIApplication.SharedApplication.OpenUrl(url))
-            {
-                var alert = UIAlertController.Create("Not supported", "Scheme 'tel:' is not supported on this device", UIAlertControllerStyle.Alert);
-                alert.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, null));
-                PresentViewController(alert, true, null);
-            }
-        }
-    }
+			BtnCall.TouchUpInside += (object sender, EventArgs e) => {
+				var url = new NSUrl("tel:" + translatedNumber);
+				// Use URL handler with tel: prefix to invoke Apple's Phone app, 
+				// otherwise show an alert dialog                
+				if (!UIApplication.SharedApplication.OpenUrl(url))
+				{
+					var alert = UIAlertController.Create("Not supported", "Scheme 'tel:' is not supported on this device", UIAlertControllerStyle.Alert);
+					alert.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, null));
+					PresentViewController(alert, true, null);
+				}
+			};
+		}
+	}
 }

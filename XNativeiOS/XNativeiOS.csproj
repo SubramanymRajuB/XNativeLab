@@ -140,6 +140,7 @@
         <InterfaceDefinition Include="Storyboards\StackViewDemoView.storyboard" />
         <InterfaceDefinition Include="Storyboards\TabeViewListNav.storyboard" />
         <InterfaceDefinition Include="Storyboards\MVVMCrossList.storyboard" />
+        <InterfaceDefinition Include="Storyboards\MVVMFirstDemo.storyboard" />
     </ItemGroup>
     <ItemGroup>
         <None Include="Info.plist" />
@@ -208,6 +209,10 @@
         </Compile>
         <Compile Include="ViewSources\TaskListViewSource.cs" />
         <Compile Include="LinkerPleaseInclude.cs" />
+        <Compile Include="Storyboards\MVVMFirstDemoView.cs" />
+        <Compile Include="Storyboards\MVVMFirstDemoView.designer.cs">
+          <DependentUpon>MVVMFirstDemoView.cs</DependentUpon>
+        </Compile>
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\XCore\XCore.csproj">
