@@ -46,6 +46,8 @@ namespace XNativeiOS.Storyboards
 			base.ViewWillAppear(animated);
 
 			TableView.Source = new RootTableSource(chores.ToArray());
+			TableView.TableFooterView = new UIView();
+
 		}
 
 		public void SaveTask(Chores chore)
